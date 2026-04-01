@@ -21,9 +21,15 @@ jobs:
         run: echo Hello, world!
 
   say-hello-inline-python:
-
     runs-on: ubuntu-slim
     steps:
       - name: python print code
         run: print("Hello World")
         shell: python
+
+  hello-world-action:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: "From github action test"
